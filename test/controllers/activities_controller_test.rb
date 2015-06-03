@@ -46,4 +46,5 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_redirected_to activities_path
   end
+
 end

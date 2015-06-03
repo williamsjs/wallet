@@ -1,3 +1,8 @@
 <h1>Your total is: <%= @total %></h1>
 
+
+<p><%= "No!!!" if @total < 0 %></p>
+<p><%= "Congrats! you're not in the negative." if @total >= 0 %></p>
+
 <%= link_to "Transactions", activities_path %>
+<%= link_to "New Transaction", activities_new_path %>

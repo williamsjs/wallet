@@ -5,10 +5,11 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @total = Activity.total
   end
 
   def total
-    @total = Activity.sum(:amount)
+    @total = Activity.total
   end
 
   # GET /activities/1
