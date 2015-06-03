@@ -6,4 +6,8 @@ class Activity < ActiveRecord::Base
     self.sum(:amount)
   end
 
+  def self.transactions
+    self.all.count
+  end
+
 end
