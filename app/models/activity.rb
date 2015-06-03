@@ -10,4 +10,11 @@ class Activity < ActiveRecord::Base
     self.all.count
   end
 
+  # def self.total_for_month
+  #   activities = self.all
+  #   activities.each do |activity|
+  #
+  # end
+
+  #Activity.all.order(:amount).first
 end
