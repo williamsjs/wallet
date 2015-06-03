@@ -9,8 +9,6 @@ class ActivitiesController < ApplicationController
   end
 
   def total
-    @total = Activity.total
-    @transactions = Activity.transactions
   end
 
   # GET /activities/1

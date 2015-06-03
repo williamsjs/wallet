@@ -10,7 +10,7 @@ class ActivityTest < ActiveSupport::TestCase
  end
 
  test "get largest amount" do
-   assert_equal 10.00, Activity.most_expensive
+   assert_equal 9.99, Activity.most_expensive
  end
 
 end

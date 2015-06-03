@@ -1,11 +1,13 @@
-<h1>Your total is: <%= @total %></h1>
+<h1>Your total is: <%= Activity.total %></h1>
 
 
-<p><%= "No!!!" if @total < 0 %></p>
-<p><%= "Congrats! you're not in the negative." if @total >= 0 %></p>
+<p><%= "No!!!" if Activity.total < 0 %></p>
+<p><%= "Congrats! you're not in the negative." if Activity.total >= 0 %></p>
 
 <%= link_to "Transactions", activities_path %>
 <%= link_to "New Transaction", activities_new_path %>
 
-<p>Number of Transactions: <%= @transactions %></p>
+<p>Number of Transactions: <%= Activity.total %></p>
 <p>Largest purchase amount: <%= Activity.most_expensive %>
+<p>Purchases this month: <%= Activity.total_month %>
+<p>Purchases last month: <%= Activity.total_previous_month %>
