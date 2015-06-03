@@ -8,6 +8,8 @@
 <%= link_to "New Transaction", activities_new_path %>
 
 <p>Number of Transactions: <%= Activity.total %></p>
-<p>Largest purchase amount: <%= Activity.most_expensive %>
-<p>Purchases this month: <%= Activity.total_month %>
-<p>Purchases last month: <%= Activity.total_previous_month %>
+<p>Largest purchase amount: <%= Activity.most_expensive %></p>
+<p>Purchases this month: <%= Activity.total_month %></p>
+<p>Purchases last month: <%= Activity.total_previous_month %></p>
+<p>Number of Transactions for this month <%= Activity.transactions_month %></p>
+<p>Number of Transactions last month <%= Activity.transactions_previous_month %></p>

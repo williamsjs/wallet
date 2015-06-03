@@ -10,10 +10,34 @@ class Activity < ActiveRecord::Base
     self.all.count
   end
 
+  def self.transactions_month
+    current_month = Time.now.month
+    transactions_for_month = Activity.all.map {|a| a if a.created_at.month == current_month}
+    if transactions_for_month.all? {|a| a==nil}
+      return 0
+    else
+      transactions_for_month.count
+    end
+  end
+
+  def self.transactions_previous_month
+    current_month = Time.now.month - 1
+    transactions_previous_month = Activity.all.map {|a| a if a.created_at.month == current_month}
+    if transactions_previous_month.all? {|a| a==nil}
+      return 0
+    else
+      transactions_previous_month.count
+    end
+  end
+
   def self.total_month
     current_month = Time.now.month
     activities_for_month = Activity.all.map {|a| a.amount if a.created_at.month == current_month}
-    activities_for_month.reduce(:+)
+    if activities_for_month.all? {|a| a==nil}
+      return 0
+    else
+      activities_for_month.reduce(:+)
+    end
   end
 
   def self.total_previous_month
@@ -25,6 +49,8 @@ class Activity < ActiveRecord::Base
       activities_for_month.reduce(:+)
     end
   end
+
+
 
   def self.most_expensive
     Activity.all.order(:amount).first.amount
