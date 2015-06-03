@@ -6,3 +6,5 @@
 
 <%= link_to "Transactions", activities_path %>
 <%= link_to "New Transaction", activities_new_path %>
+
+<p>Amount of Transactions: <%= Activity.all.count %></p>
