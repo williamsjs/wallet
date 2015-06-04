@@ -42,7 +42,7 @@ class Activity < ActiveRecord::Base
     previous_month = Time.now.month - 1
     activities_for_month = Activity.all.map {|a| a.amount if a.created_at.month == previous_month && a.amount < 0}
     if activities_for_month.all? {|a| a== nil}
-      return 0
+      0
     else
       activities_for_month.reduce(:+)
     end
@@ -55,13 +55,10 @@ class Activity < ActiveRecord::Base
     most_expensive.abs unless most_expensive.nil?
   end
 
-  def self.most_pop_org
-
-  end
-
   def self.most_expensive
     expensive = Activity.all.order(:amount).first.amount unless Activity.count == 0
-    expensive.abs unless expensive.nil?
+    return expensive.abs unless expensive.nil?
+    0
   end
 
 end
