@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
-  def total
+  def home
   end
 
   # GET /activities/1

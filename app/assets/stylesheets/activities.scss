@@ -5,4 +5,54 @@
 th, td {
   border: 1px solid black;
   background: lightgrey;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+html {
+  background-color: lightblue;
+}
+
+#home, #all {
+  background-color: lightblue
+}
+
+#header {
+  border: 3px solid green;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px darkgreen;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  background: white;
+}
+
+#message h2{
+  border: 3px solid green;
+  text-align: center;
+  margin: 25px auto;
+  width: 30%;
+  background: red;
+  padding: 5px;
+}
+
+#stats {
+  border: 3px solid black;
+  margin: auto;
+  width: 50%;
+  padding: 15px;
+  background: lightgreen;
+}
+
+#stats a, #all a {
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 20%;
+  background: white;
+  color: black;
+  display: inline-block;
+}
+
+#stats h4 {
+  text-align: center;
 }
