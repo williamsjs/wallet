@@ -3,11 +3,19 @@
 one:
   amount: 9.99
   organization: MyString
+  created_at: Thu, 04 Jun 2015 01:21:43 UTC +00:00
 
 two:
   amount: 9.99
   organization: MyString
+  created_at: Thu, 04 Jun 2015 01:21:43 UTC +00:00
 
 three:
   amount: 10.00
   organization: blah
+  created_at: Thu, 04 Jun 2015 01:21:43 UTC +00:00
+
+four:
+  amount: -10.00
+  organization: blago
+  created_at: Thu, 04 Jun 2015 01:21:43 UTC +00:00

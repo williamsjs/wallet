@@ -1,15 +1,17 @@
-<h1>Your total is: <%= Activity.total %></h1>
+<h1>Your total is: <%= Activity.balance %></h1>
 
 
-<p><%= "No!!!" if Activity.total < 0 %></p>
-<p><%= "Congrats! you're not in the negative." if Activity.total >= 0 %></p>
+<h1><%= "No!!! You are overdrawn!!!" if Activity.balance < 0 %></h1>
+<p><%= "Congrats! you're not in the negative." if Activity.balance >= 0 %></p>
 
 <%= link_to "Transactions", activities_path %>
 <%= link_to "New Transaction", activities_new_path %>
 
-<p>Number of Transactions: <%= Activity.total %></p>
+<p>Number of Transactions: <%= Activity.transactions %></p>
 <p>Largest purchase amount: <%= Activity.most_expensive %></p>
 <p>Purchases this month: <%= Activity.total_month %></p>
 <p>Purchases last month: <%= Activity.total_previous_month %></p>
 <p>Number of Transactions for this month <%= Activity.transactions_month %></p>
 <p>Number of Transactions last month <%= Activity.transactions_previous_month %></p>
+<p>Most expensive this month <%= Activity.most_expensive_for_month %></p>
+<p>Most popular Organization <%= Activity.most_pop_org %></p>
